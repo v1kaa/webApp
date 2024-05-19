@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szyfrowanie i Deszyfrowanie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Szyfrowanie i Deszyfrowanie</h1>
+        <form id="cryptoForm" method="post" action="process.php">
+            <label for="cipher">Wybierz Szyfr:</label>
+            <select id="cipher" name="cipher">
+                <option value="caesar">Szyfr Cezara</option>
+                <option value="vigenere">Szyfr Vigenere</option>
+                <option value="atbash">Szyfr Atbash</option>
+                <option value="railfence">Szyfr Rail Fence</option>
+            </select>
+
+            <label for="key">Klucz:</label>
+            <input type="text" id="key" name="key" required>
+
+            <label for="text">Tekst:</label>
+            <textarea id="text" name="text" required></textarea>
+
+            <label for="action">Akcja:</label>
+            <select id="action" name="action">
+                <option value="encrypt">Szyfruj</option>
+                <option value="decrypt">Deszyfruj</option>
+            </select>
+
+            <button type="submit">Wykonaj</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
